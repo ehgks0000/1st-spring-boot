@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  app:
+    container_name: spring-app
+    build:
+      context: ./
+      target: dev
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env
+    restart: always
+    networks:
+      - spring
+
+networks:
+  spring:
+    driver: bridge
+    external: true

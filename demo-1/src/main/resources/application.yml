@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    default: dev # 기본 환경을 dev로, 중복되는 내용이 있으면 profiles가 우선순위가 높다.

@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${URL}
+    username: ${USER_NAME}
+    password: ${PASSWORD}
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
